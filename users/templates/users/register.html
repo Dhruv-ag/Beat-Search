@@ -1,0 +1,24 @@
+{%extends 'base.html'%}
+{%block content%}
+{%load socialaccount%}
+<div class="">
+  <form method="post">
+    {%csrf_token%}
+    <fieldset class="">
+      Join Today
+      {{form.as_p}}
+    </fieldset>
+    <div class="submit">
+      <button type="submit">Sign Up</button>
+    </div>
+  </form>
+  <div class="">
+    <small>
+
+          <a href="{%provider_login_url 'google'%}">Signin through google?</a>
+
+      Already Have an account? <a href="{%url 'login'%}">Sign In</a>
+    </small>
+  </div>
+</div>
+{%endblock%}

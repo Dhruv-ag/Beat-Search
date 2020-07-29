@@ -1,0 +1,15 @@
+{%extends 'base.html'%}
+{%block content%}
+{%if user.is_authenticated%}
+<h1>home</h1>
+<h2><a href="{%url 'logout'%}">Logout</a></h2>
+{%else%}
+<button onclick="myFunction()">Welcome Page</button>
+
+<script>
+function myFunction() {
+  location.replace("{%url 'welcome'%}")
+}
+</script>
+{%endif%}
+{%endblock%}
