@@ -1,16 +1,28 @@
 {%extends 'base.html'%}
 {%block content%}
 {%load socialaccount%}
+{%if user.is_authenticated%}
+<ul class="navr">
+  <li> <a href="{%url 'logout'%}">Logout</a> </li>
+  <li> <a href="{%url 'profile'%}">profile</a> </li>
+  <li> <a href="{%url 'home'%}">Home</a> </li>
+  <li> <a href="{%url 'welcome'%}">Welcome</a> </li>
+</ul>
+{%else%}
+<ul class="navr">
+<li><a href="{%url 'login'%}">Login</a></li>
+<li><a href="{%url 'register'%}">Sign up</a></li>
+<li> <a href="{%url 'welcome'%}">Welcome</a> </li>
+</ul>
+{%endif%}
 <div class="">
   <form method="post">
     {%csrf_token%}
-    <fieldset class="">
-      Join Today
+    <fieldset class="register">
+      <h1 class="join-head">Join Today</h1>
       {{form.as_p}}
-    </fieldset>
-    <div class="submit">
       <button type="submit">Sign Up</button>
-    </div>
+    </fieldset>
   </form>
   <div class="">
     <small>

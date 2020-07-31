@@ -1,6 +1,22 @@
 {%extends 'base.html'%}
 {%block content%}
-<h1>welcome</h1>
-<small><a href="{%url 'login'%}">Login or</a></small>
-<span><a href="{%url 'register'%}">Sign up</a></span>
+{%if user.is_authenticated%}
+<ul class="nav">
+  <li> <a href="{%url 'logout'%}">Logout</a> </li>
+  <li> <a href="{%url 'profile'%}">profile</a> </li>
+  <li> <a href="{%url 'home'%}">Home</a> </li>
+  <li> <a href="{%url 'welcome'%}">Welcome</a> </li>
+</ul>
+{%else%}
+<ul class="nav">
+<li><a href="{%url 'login'%}">Login</a></li>
+<li><a href="{%url 'register'%}">Sign up</a></li>
+<li> <a href="{%url 'welcome'%}">Welcome</a> </li>
+</ul>
+{%endif%}
+{%if user.is_authenticated%}
+<h1 id="welcome"><a href="{%url 'welcome'%}">Welcome</a>  <a href="{%url 'profile'%}">{{user.username}}</a></h1>
+{%else%}
+<h1 id="welcome"><a href="{%url 'welcome'%}">Welcome</a></h1>
+{%endif%}
 {%endblock%}

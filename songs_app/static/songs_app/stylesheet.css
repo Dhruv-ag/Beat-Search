@@ -1,0 +1,163 @@
+body{
+background-image: url('cover4.jpg');
+color: white;
+font-family: 'Dancing Script', cursive;
+font-weight: bold;
+
+}
+#welcome{
+text-align: center;
+font-size:90px;
+font-family: 'Satisfy', cursive;
+font-weight: bold;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+.nav{
+  list-style-type: none;
+    margin: 0;
+    padding: 0;
+font-size: 23px;
+width: 100%;
+text-align: right;
+margin-bottom: 135px;
+font-family: 'Patrick Hand', cursive;
+}
+.nav li{
+  display: inline-block;
+  margin-left: 15px;
+  margin-right: 20px;
+}
+.nav li a{
+  color: white;
+  text-decoration: none;
+}
+
+.logout{
+  text-align: center;
+  font-size:50px;
+  font-family: 'Satisfy', cursive;
+}
+fieldset{
+  border: 0px solid;
+}
+.login-form{
+  border: 0px solid;
+  font-family: 'Patrick Hand', cursive;
+  margin:auto;
+  padding-left: 40%;
+  font-style: 100px;
+}
+.login{
+  font-family: 'Patrick Hand', cursive;
+  text-align: center;
+font-size: 40px;
+}
+#id_username{
+  font-style: 50px;
+}
+#id_password{
+  font-style: 50px;
+}
+label{
+  font-size: 30px;
+}
+.submit-login{
+  background: white;
+  color:black;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 20px;
+}
+.navr{
+  list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 20px;
+font-size: 23px;
+width: 100%;
+text-align: right;
+margin-bottom: 0px;
+font-family: 'Patrick Hand', cursive;
+}
+.navr li{
+  display: inline-block;
+  margin-left: 15px;
+  margin-right: 20px;
+}
+.navr li a{
+  color: white;
+  text-decoration: none;
+}
+.register{
+  font-family: 'Patrick Hand', cursive;
+}
+.home{
+  font-family: 'Satisfy', cursive;
+  font-size: 70px;
+  text-align: center;
+}
+.search{
+  font-size: 20px;
+  margin-left:38%;
+}
+.navl{
+  list-style-type: none;
+    margin: 0;
+    padding: 0;
+font-size: 23px;
+width: 100%;
+text-align: right;
+margin-bottom: 80px;
+font-family: 'Patrick Hand', cursive;
+}
+.navl li{
+  display: inline-block;
+  margin-left: 15px;
+  margin-right: 20px;
+}
+.navl li a{
+  color: white;
+  text-decoration: none;
+}
+.username-profile{
+  font-family: 'Patrick Hand', cursive;
+  font-size: 40px;
+}
+.email-profile{
+  font-family: 'Patrick Hand', cursive;
+  font-size: 40px;
+}
+.picture-profile{
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+}
+.personal-info{
+  text-align: center;
+}
+.navp{
+  list-style-type: none;
+    margin: 0;
+    padding: 0;
+font-size: 23px;
+width: 100%;
+text-align: right;
+margin-bottom: 30px;
+font-family: 'Patrick Hand', cursive;
+}
+.navp li{
+  display: inline-block;
+  margin-left: 15px;
+  margin-right: 20px;
+}
+.navp li a{
+  color: white;
+  text-decoration: none;
+}
+.beat{
+  float: left;
+  font-family: 'Satisfy', cursive;
+  margin-top: 0;
+}

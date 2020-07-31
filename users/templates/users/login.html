@@ -1,22 +1,33 @@
 {%extends 'base.html'%}
 {%block content%}
 {%load socialaccount%}
+{%if user.is_authenticated%}
+<ul class="navl">
+  <li> <a href="{%url 'logout'%}">Logout</a> </li>
+  <li> <a href="{%url 'profile'%}">profile</a> </li>
+  <li> <a href="{%url 'home'%}">Home</a> </li>
+  <li> <a href="{%url 'welcome'%}">Welcome</a> </li>
+</ul>
+{%else%}
+<ul class="navl">
+<li><a href="{%url 'login'%}">Login</a></li>
+<li><a href="{%url 'register'%}">Sign up</a></li>
+<li> <a href="{%url 'welcome'%}">Welcome</a> </li>
+</ul>
+{%endif%}
 <div class="">
   <form method="post">
     {%csrf_token%}
-    <fieldset class="">
-      Login
+    <h1 class="login">Login</h1>
+    <fieldset class="login-form">
+
       {{form.as_p}}
+      <button type="submit" class="submit-login">Login</button>
+      <span>
+        <a href="{%provider_login_url 'google'%}">Signin through google  </a>
+        <br>Need an account? <a href="{%url 'register'%}">  Click Me</a>
+      </span>
     </fieldset>
-    <div class="submit">
-      <button type="submit">Login</button>
-    </div>
   </form>
-  <div class="">
-    <small>
-      <a href="{%provider_login_url 'google'%}">Signin through google?</a>
-      Need an account? <a href="{%url 'register'%}">Sign up</a>
-    </small>
-  </div>
-</div>
+    </div>
 {%endblock%}
